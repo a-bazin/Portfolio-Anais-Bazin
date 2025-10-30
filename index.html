@@ -1,80 +1,245 @@
 <!DOCTYPE html>
-<html lang="fr" class="is-smooth-scroll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth">
+<html 
+  lang="en"
+  class="is-smooth-scroll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth"> 
+
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio Anaïs Bazin</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./lib/locomotive-scroll.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./lib/locomotive-scroll.min.css"/>
   </head>
-
-  <body>
+  <body> 
     <div data-scroll-container>
       <header data-scroll>
-        <div class="header-content">
-          <div class="text-block">
-            <div class="links">
-              <a href="#portfolio" data-scroll-to>portfolio</a>
-              <a href="mailto:bazinanais30@gmail.com">contact</a>
+          <div class="links">
+            <a href="#portfolio" data-scroll-to>portfolio</a>
+            <a href="mailto:bazinanais30@gmail.com">contact</a>
+          </div>
+          <div class="wrapper">
+            <div data-scroll class="appear" id="h1-wrapper">
+              <h1 data-scroll data-scroll-speed="4" data-scroll-position="left">
+                Anaïs Bazin
+              </h1>
             </div>
+          </div>
+          <div data-scroll data-scroll-repeat="true" class="wrapper" id="color">
+            <div data-scroll class="appear" id="h2-1">
+              <h2
+                data-scroll
+                data-scroll-speed="6"
+                data-scroll-direction="horizontal"
+                data-scroll-position="left">
 
-            <div class="wrapper">
-              <div data-scroll class="appear" id="h1-wrapper">
-                <h1 data-scroll data-scroll-speed="4" data-scroll-position="left">
-                  Anaïs Bazin
-                </h1>
+                Développeuse Web et Web Mobile
+              </h2>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div data-scroll class="appear" id="h2-2">
+              <h2
+                data-scroll
+                data-scroll-speed="6"
+                data-scroll-direction="horizontal"
+                data-scroll-position="left">
+
+                En alternance
+              </h2>
+            </div>
+          </div>
+          <div class="scroll-wrapper">
+            <p data-scroll data-scroll-speed="-3" data-scroll-position="top">
+              please scroll
+            </p>
+          </div>
+        </header>
+  
+        <section class="about">
+          <div data-scroll data-scroll-speed="-1" class="img1-wrapper">
+            <div class="img img1"></div>
+          </div>
+          <div data-scroll data-scroll-speed="3" class="h2-wrapper">
+            <h2>À propos</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente qui
+            similique quos, quibusdam cupiditate perferendis! Fugiat eum illum nulla
+            delectus? Aspernatur nulla nesciunt itaque ut, aperiam iste ex molestiae
+            quam quasi impedit eius ad voluptates atque tempore praesentium odit
+            quisquam necessitatibus reiciendis illo et libero delectus cum sunt!
+            Eum, necessitatibus quaerat? Temporibus natus odit quibusdam sunt,
+            consequatur ratione rerum nesciunt expedita doloribus minus ullam
+            voluptate fugit voluptatem quas illo laboriosam. Voluptatum similique
+            illum nam commodi distinctio quos eos deserunt repellendus.
+          </p>
+        </section>
+  
+        <div data-scroll class="line-wrapper">
+          <div class="line"></div>
+        </div>
+  
+        <section class="skills">
+          <h2 class="title">
+            <span data-scroll data-scroll-speed="1">C</span>
+            <span data-scroll data-scroll-speed="0">o</span>
+            <span data-scroll data-scroll-speed="1">m</span>
+            <span data-scroll data-scroll-speed="2">p</span>
+            <span data-scroll data-scroll-speed="0">é</span>
+            <span data-scroll data-scroll-speed="1">t</span>
+            <span data-scroll data-scroll-speed="2">e</span>
+            <span data-scroll data-scroll-speed="1">n</span>
+            <span data-scroll data-scroll-speed="0">c</span>
+            <span data-scroll data-scroll-speed="1">e</span>
+          </h2>
+  
+          <div class="wrapper">
+            <div data-scroll class="appear">
+              <p
+                data-scroll
+                data-scroll-speed="-2"
+                data-scroll-direction="horizontal"
+              >
+                JavaScript
+              </p>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div data-scroll class="appear">
+              <p
+                data-scroll
+                data-scroll-speed="1"
+                data-scroll-direction="horizontal"
+              >
+                HTML
+              </p>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div data-scroll class="appear">
+              <p
+                data-scroll
+                data-scroll-speed="-6"
+                data-scroll-direction="horizontal"
+              >
+                CSS
+              </p>
+            </div>
+          </div>
+          <div class="wrapper">
+              <div data-scroll class="appear">
+                <p
+                  data-scroll
+                  data-scroll-speed="3"
+                  data-scroll-direction="horizontal"
+                >
+                  PYTHON
+                </p>
               </div>
             </div>
-
-            <div data-scroll data-scroll-repeat="true" class="wrapper" id="color">
-              <div data-scroll class="appear" id="h2-1">
-                <h2
+            <div class="wrapper">
+              <div data-scroll class="appear">
+                <p
                   data-scroll
-                  data-scroll-speed="6"
+                  data-scroll-speed="-4"
                   data-scroll-direction="horizontal"
-                  data-scroll-position="left"
                 >
-                  Développeuse Web et Web Mobile
-                </h2>
+                  LINUX
+                </p>
               </div>
             </div>
-
             <div class="wrapper">
-              <div data-scroll class="appear" id="h2-2">
-                <h2
+              <div data-scroll class="appear">
+                <p
                   data-scroll
-                  data-scroll-speed="6"
+                  data-scroll-speed="8"
                   data-scroll-direction="horizontal"
-                  data-scroll-position="left"
                 >
-                  En alternance
-                </h2>
+                  PHP
+                </p>
+              </div>
+            </div>
+        </section>
+  
+        <div data-scroll class="line-wrapper">
+          <div class="line"></div>
+        </div>
+  
+        <section class="portfolio" id="portfolio">
+          <h2 class="title">
+            <span data-scroll data-scroll-speed="1">P</span>
+            <span data-scroll data-scroll-speed="0">o</span>
+            <span data-scroll data-scroll-speed="1">r</span>
+            <span data-scroll data-scroll-speed="2">t</span>
+            <span data-scroll data-scroll-speed="0">f</span>
+            <span data-scroll data-scroll-speed="1">o</span>
+            <span data-scroll data-scroll-speed="2">l</span>
+            <span data-scroll data-scroll-speed="1">i</span>
+            <span data-scroll data-scroll-speed="0">o</span>
+          </h2>
+          <div class="projects-container">
+            <div data-scroll data-scroll-speed="1" class="project" id="p1">
+              <img src="./img/projet-1.jpg" alt="projet 1" />
+              <div class="project-infos">
+                <a href="file:///G:/NSI/site%20web%202022/L'athl%C3%A9tisme1.html" target="_blank">L'athlétisme</a>
+                <p>2022</p>
+              </div>
+            </div>
+            <div data-scroll class="project" id="p2">
+              <img src="./img/projet-2.jpg" alt="projet 2" />
+              <div class="project-infos">
+                <a href="https://www.google.com" target="_blank">Casta</a>
+                <p>2021</p>
+              </div>
+            </div>
+            <div data-scroll class="project" id="p3">
+              <img src="./img/projet-3.jpg" alt="projet 3" />
+              <div class="project-infos">
+                <a href="https://www.google.com" target="_blank">Everpost</a>
+                <p>2022</p>
               </div>
             </div>
           </div>
-
-          <div class="header-photo" data-scroll data-scroll-speed="1">
-            <img src="./img/anais-a-proxiad.png" alt="Photo de Anaïs Bazin" class="photo-anais" />
+        </section>
+  
+        <div data-scroll class="line-wrapper">
+          <div class="line"></div>
+        </div>
+  
+        <footer>
+          <div class="wrapper">
+            <div data-scroll class="appear">
+              <p>Vous avez un projet ?</p>
+            </div>
           </div>
-        </div>
+          <div class="wrapper">
+            <div data-scroll id="l2" class="appear">
+              <p>
+                Je serai ravie
+                <a href="mailto:bazinanais30@gamail.com">d'échanger</a>
+              </p>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div data-scroll id="l3" class="appear">
+              <p>avec vous!</p>
+            </div>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="7"
+            data-scroll-position="bottom"
+            class="img-wrapper"
+          >
+            <div class="img img2"></div>
+          </div>
+          <br /><br /><br />
+        </footer>
+    </div>
 
-        <div class="scroll-wrapper">
-          <p data-scroll data-scroll-speed="-3" data-scroll-position="top">please scroll</p>
-        </div>
-      </header>
-
-      <section class="about">
-        <div data-scroll data-scroll-speed="-1" class="img1-wrapper">
-          <div class="img img1"></div>
-        </div>
-
-        <div data-scroll data-scroll-speed="3" class="h2-wrapper">
-          <h2>À propos</h2>
-        </div>
-
-        <h3>Soif d'apprendre</h3>
-        <p id="accroche">
-          Curieuse de découvrir les techniques du développement web et web mobile
+      <script src="./lib/locomotive-scroll.js"></script>
+      <script src="./js/index.js"></script>
+    </body>
+  </html>
