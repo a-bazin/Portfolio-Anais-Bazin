@@ -1,0 +1,407 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  background: #000101;
+  color: #fefeff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #000101;
+  color: #fefeff;
+  transition: 0.7s ease-in-out;
+}
+
+/* ========================================================= */
+/* ✅ Fallback si le JS (Locomotive) ne démarre pas */
+/* Empêche la page d’être vide si is-inview n'est jamais ajouté */
+.no-js .appear {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+/* ========================================================= */
+
+/* --- Apparitions et animations --- */
+.wrapper {
+  perspective: 900px;
+}
+
+.appear {
+  opacity: 0;
+  transform: translateY(100%) rotateX(-80deg);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.appear.is-inview {
+  transition-delay: 1s;
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Titres et textes généraux --- */
+h2 {
+  font-size: calc(3rem + 5vw);
+  text-align: center;
+  color: rgb(217, 217, 217);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 3px;
+}
+
+.title {
+  font-size: calc(1.5rem + 5vw);
+  letter-spacing: 0;
+}
+
+span {
+  display: inline-block;
+}
+
+/* --- Liens --- */
+a,
+a:visited {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: #fefeff;
+  transition: 0.1s linear;
+  font-size: calc(0.8rem + 0.8vw);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #fefeff;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  transform-origin: left;
+}
+
+a:hover {
+  transform: scale(1.04);
+  color: rgb(217, 217, 217);
+}
+
+a:hover::after {
+  animation: animlink 1.4s infinite ease-in-out;
+}
+
+@keyframes animlink {
+  50% {
+    transform: scaleX(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* --- Images générales --- */
+.img {
+  height: 395px;
+  width: 100vw;
+  margin: 0 auto;
+  transition: 1.6s;
+}
+
+.img:hover {
+  filter: grayscale(10%);
+}
+
+/* --- Lignes de séparation --- */
+.line {
+  height: 2px;
+  width: 70%;
+  margin: 0 auto;
+  background: #000101;
+  transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
+  transform: scaleX(0);
+  transition-delay: 0.45s;
+  opacity: 0;
+}
+
+.line-wrapper.is-inview .line {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ================================================================== */
+/* ========================== HEADER ================================= */
+/* ================================================================== */
+
+header {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Liens en haut */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.links a {
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+/* Bloc texte à gauche */
+.text-block {
+  flex: 1 1 55%;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 9vw, 6.5rem);
+  margin-top: 2rem;
+  line-height: 0.95;
+  letter-spacing: 4px;
+  color: #fefeff;
+}
+
+header h2 {
+  font-size: clamp(1.25rem, 5.2vw, 3.6rem);
+  margin: 14px 0;
+  text-align: left;
+  color: #d9d9d9;
+}
+
+/* Bloc photo à droite */
+.header-photo {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-anais {
+  width: clamp(170px, 22vw, 280px);
+  height: clamp(170px, 22vw, 280px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f5e2c2;
+  background: radial-gradient(ellipse at 50% 50%, #f7eddc 0%, #000101 60%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease;
+}
+
+.photo-anais:hover {
+  transform: scale(1.03);
+}
+
+/* Texte scroll */
+.scroll-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.2rem;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  color: #cfcfcf;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .text-block {
+    flex-basis: auto;
+  }
+
+  header h2 {
+    text-align: center;
+  }
+
+  .links {
+    order: -1;
+    margin-top: 0;
+  }
+
+  .header-photo {
+    margin-top: 2rem;
+  }
+
+  .photo-anais {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ================================================================== */
+/* ========================== ABOUT ================================= */
+/* ================================================================== */
+
+.about {
+  margin: 220px 0 160px;
+}
+
+.img1 {
+  background: url(../img/Bazin\ Anaïs.jpg) top/cover;
+  max-width: 395px;
+  filter: grayscale(100%);
+}
+
+.h2-wrapper {
+  mix-blend-mode: exclusion;
+  margin: -220px 0 200px;
+}
+
+.about p {
+  width: 70%;
+  min-width: 280px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: calc(7px + 4.5vw);
+  font-size: calc(1.5rem + 1vw);
+  letter-spacing: 1px;
+}
+
+/* ================================================================== */
+/* ========================== SKILLS ================================= */
+/* ================================================================== */
+
+.skills {
+  margin: 140px 0 180px;
+}
+
+.skills h2 {
+  margin-bottom: 150px;
+}
+
+.skills .wrapper {
+  margin: 30px 0;
+}
+
+.skills .appear {
+  text-align: center;
+  transition-delay: 0.6s;
+}
+
+.skills p {
+  font-size: calc(1rem + 6vw);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  background: #000101;
+  color: #fefeff;
+  display: inline-block;
+  padding: 0 12px 12px;
+}
+
+/* ================================================================== */
+/* ======================== PORTFOLIO =============================== */
+/* ================================================================== */
+
+.portfolio {
+  margin: 140px 0;
+}
+
+.projects-container {
+  margin-top: 100px;
+}
+
+.project {
+  position: relative;
+  width: 60vw;
+  max-width: 600px;
+  margin: 50px 5vw;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 100%;
+  top: -3px;
+  background: #fefeff;
+  transition: width 1s ease-out;
+  transition-delay: 0.85s;
+}
+
+.project.is-inview::before {
+  width: 0;
+}
+
+.project img {
+  transition: 0.4s ease-out;
+  width: 100%;
+}
+
+.project:hover img {
+  filter: brightness(20%);
+}
+
+.project:hover .project-infos {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.project-infos {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 8vw;
+  transition: 0.4s ease-out;
+  opacity: 0;
+}
+
+.project-infos a {
+  font-size: calc(1rem + 3vw);
+}
+
+.project-infos p {
+  font-size: 2rem;
+  margin-top: 1.5vw;
+  color: #fefeff;
+}
+
+/* ================================================================== */
+/* =========================== FOOTER =============================== */
+/* ================================================================== */
+
+footer {
+  margin: 150px 0 120px;
+}
+
+footer p {
+  font-size: calc(1rem + 2vw);
+  margin: 25px 0;
+  text-align: center;
+}
+
+footer a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000101;
+  font-size: calc(1rem + 2vw);
+}
+
+.img2 {
+  background: url(../img/anais-a-proxiad.png) center/cover;
+  height: 395px;
+  width: 800px;
+}
